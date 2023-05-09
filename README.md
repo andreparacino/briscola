@@ -3,7 +3,7 @@
 
 This is a **React-based Briscola application** that allows one player to play against the CPU for two rounds. The goal of the game is to reach at least 120 points within the two rounds to win.
 
-You can access the application at [www.briscola.netlify.app](www.briscola.netlify.app).
+You can access the application at this [link](https://briscola-react.netlify.app/).
 
 ## Technologies Used
 
