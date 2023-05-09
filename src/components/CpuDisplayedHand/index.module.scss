@@ -1,0 +1,44 @@
+@import "@/common/styles/constants";
+
+.CpuDisplayedHand {
+  pointer-events: none;
+  min-height: 85px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 7px 10px;
+  border: 2px solid black;
+  background-color: $color-player-area-bg;
+  gap: 10px;
+  max-width: 350px;
+  overflow-y: hidden;
+  height: auto;
+
+  > * {
+    margin-top: -90px;
+  }
+
+  &--isThinking {
+    border-color: $color-active-player;
+
+    .CpuDisplayedHand-card {
+      transition: opacity 0.2s;
+      animation: glowing 1.3s ease-in-out infinite;
+    }
+  }
+
+  @keyframes glowing {
+    0% {
+      opacity: 0.8;
+    }
+
+    50% {
+      opacity: 0.2;
+    }
+
+    100% {
+      opacity: 0.8;
+    }
+  }
+}

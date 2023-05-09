@@ -1,0 +1,26 @@
+@import "@/common/styles/constants";
+
+.Button {
+  background-color: #fff;
+  border: 1px solid #adadad;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1.5;
+  margin-bottom: 0;
+  padding: 8px 14px;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition: all 0.3s;
+
+  &:hover {
+    border-color: $color-card-border;
+    transform: scale(1.02);
+    // box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+      rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  }
+}

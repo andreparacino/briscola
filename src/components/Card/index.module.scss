@@ -1,0 +1,76 @@
+@import "@/common/styles/constants";
+
+.Card {
+  width: 100px;
+  height: 158px;
+  background-color: $color-card-front-bg;
+  border-radius: 10px;
+  padding: 7px 10px;
+  border: 1px solid $color-card-border;
+  position: relative;
+  font-weight: 600;
+
+  > * {
+    user-select: none;
+  }
+
+  &-valueIndicator,
+  &-suitIndicator {
+    position: absolute;
+  }
+
+  &-valueIndicator {
+    font-size: 26px;
+    top: 0;
+    left: 7px;
+
+    &--bottom {
+      top: unset;
+      left: unset;
+      bottom: 0;
+      right: 7px;
+    }
+  }
+
+  &-suitIndicator {
+    writing-mode: vertical-lr;
+    right: 2px;
+
+    &--bottom {
+      transform: rotate(180deg);
+      top: unset;
+      right: unset;
+      bottom: 7px;
+      left: 2px;
+    }
+  }
+
+  &-centerValue {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &--hidden {
+    cursor: default;
+    background: linear-gradient(
+          90deg,
+          $color-card-back-bg (22px - 2px),
+          transparent 1%
+        )
+        center,
+      linear-gradient($color-card-back-bg (22px - 2px), transparent 1%) center,
+      hsl(0, 0%, 0%);
+    background-size: 22px 22px;
+  }
+
+  &--clickable {
+    cursor: pointer;
+
+    > * {
+      cursor: pointer;
+    }
+  }
+}

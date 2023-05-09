@@ -1,0 +1,11 @@
+.GameView {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  min-height: 100dvh;
+  width: 100vw;
+  gap: 20px;
+  flex-wrap: wrap;
+}

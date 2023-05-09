@@ -1,0 +1,4 @@
+export enum BUFFERING_TIME {
+  CPU_MOVE = 1600,
+  ENGINE_EVALUATION = 1500,
+}

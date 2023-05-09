@@ -1,0 +1,72 @@
+.GameTable {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  &-deck {
+    will-change: transform;
+    min-width: 160px;
+    position: relative;
+    transition: all 0.3s;
+
+    &Pile {
+      transition: filter 0.3s, transform 0.3s;
+    }
+
+    &Briscola {
+      position: absolute;
+      top: 50%;
+      left: 30px;
+      transition: all 0.3s;
+      transform: translateY(-50%) rotate(90deg);
+      z-index: -1;
+    }
+
+    &Counter {
+      font-weight: bold;
+      position: absolute;
+      top: 50%;
+      left: 30px;
+      transform: translateY(-50%);
+      z-index: 1;
+      background-color: aliceblue;
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-content: center;
+      border-radius: 50%;
+    }
+
+    &:hover {
+      .GameTable-deckBriscola {
+        transform: translate(80px, -50%) rotate(0deg);
+      }
+      .GameTable-deckPile {
+        filter: brightness(1.25);
+        transform: scale(0.9);
+      }
+      &:hover ~ .GameTable-playingCards {
+        opacity: 0.6;
+        transform: scale(0.9);
+      }
+    }
+  }
+
+  &-playingCards {
+    display: flex;
+    gap: 20px;
+    pointer-events: none;
+    transition: all 0.2s;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    gap: 40px;
+
+    &-deck:hover {
+      margin-right: 40px;
+    }
+  }
+}
