@@ -22,7 +22,7 @@ For a deeper dive into the inner workings of these algorithms, check out the `al
 
 (You will see logs of who wins each hand in the console)
 
-## Deck Shuffling
+## Deck Management
 
 The game follows the same **deck management** principles as in a physical game of Briscola. The game starts with a deck of 40 cards that are ordered and shuffled using the `shuffleDeck` helper function before the game begins. To distribute the cards, six cards are removed from the shuffled deck and added to both the player and CPU's hand. Then during gameplay, the game feeds the players with one card each for each hand played.
 
