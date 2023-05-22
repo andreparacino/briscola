@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { memo, ReactNode } from "react";
 
 import styles from "./index.module.scss";
 
@@ -16,4 +16,4 @@ const Button = ({
   );
 };
 
-export default Button;
+export default memo(Button);

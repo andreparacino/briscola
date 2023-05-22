@@ -2,7 +2,8 @@ import { useCallback } from "react";
 
 import { SUIT_COLORS } from "@/common/helpers/constants";
 import { useClassNames } from "@/common/helpers/hooks";
-import { SUIT } from "@/engine/enums";
+import SuitIndicator from "@/components/Card/components/SuitIndicator";
+import ValueIndicator from "@/components/Card/components/ValueIndicator";
 import { CardData } from "@/engine/models";
 
 import styles from "./index.module.scss";
@@ -56,53 +57,6 @@ const Card = ({
       <SuitIndicator isBottom suit={cardData.suit} />
       <ValueIndicator isBottom value={cardData.value} suit={cardData.suit} />
     </div>
-  );
-};
-
-const ValueIndicator = ({
-  value,
-  isBottom,
-  suit,
-}: {
-  value: number;
-  isBottom?: boolean;
-  suit: SUIT;
-}) => {
-  const valueIndicatorClassNames = useClassNames([
-    styles["Card-valueIndicator"],
-    isBottom && styles["Card-valueIndicator--bottom"],
-  ]);
-  return (
-    <span
-      style={{ color: SUIT_COLORS[suit] }}
-      className={valueIndicatorClassNames}
-    >
-      {value}
-    </span>
-  );
-};
-
-const SuitIndicator = ({
-  suit,
-  isBottom,
-}: {
-  suit: SUIT;
-  isBottom?: boolean;
-}) => {
-  const suitIndicatorClassNames = useClassNames([
-    styles["Card-suitIndicator"],
-    isBottom && styles["Card-suitIndicator--bottom"],
-  ]);
-  return (
-    <span
-      style={{
-        color: SUIT_COLORS[suit],
-        fontSize: `${(12 * 7) / suit.length}px`,
-      }}
-      className={suitIndicatorClassNames}
-    >
-      {suit.toUpperCase()}
-    </span>
   );
 };
 

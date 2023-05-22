@@ -1,4 +1,4 @@
-import { TypeOrNonExisting } from "@/engine/models";
+import { TypeOrNonExisting } from "@/common/helpers/models";
 
 export const joinTruthyStrings = (
   strings: TypeOrNonExisting<string | false>[],

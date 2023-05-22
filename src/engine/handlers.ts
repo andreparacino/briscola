@@ -1,3 +1,4 @@
+import { TypeOrUndefined } from "@/common/helpers/models";
 import { evaluateWinningCard } from "@/engine/algorithms";
 import {
   INITIAL_DECK,
@@ -56,7 +57,7 @@ export const handleGiveCards = ({
   userHand,
 }: {
   oldState: GameState;
-  amount: number | undefined;
+  amount: TypeOrUndefined<number>;
   cpuHand: CardData[];
   userHand: CardData[];
 }): GameState => {

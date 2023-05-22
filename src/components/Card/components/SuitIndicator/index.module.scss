@@ -1,0 +1,13 @@
+.SuitIndicator {
+  position: absolute;
+  writing-mode: vertical-lr;
+  right: 2px;
+
+  &--bottom {
+    transform: rotate(180deg);
+    top: unset;
+    right: unset;
+    bottom: 7px;
+    left: 2px;
+  }
+}

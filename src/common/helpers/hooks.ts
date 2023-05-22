@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 
+import { TypeOrNonExisting } from "@/common/helpers/models";
 import { joinClassNames } from "@/common/helpers/utilities";
-import { TypeOrNonExisting } from "@/engine/models";
 
 export const useClassNames = (
   classNames: TypeOrNonExisting<string | false>[]

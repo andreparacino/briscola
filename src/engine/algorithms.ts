@@ -1,10 +1,6 @@
+import { TypeOrNull, TypeOrUndefined } from "@/common/helpers/models";
 import { SUIT } from "@/engine/enums";
-import {
-  CardData,
-  PointsControl,
-  TypeOrNull,
-  TypeOrUndefined,
-} from "@/engine/models";
+import { CardData, PointsControl } from "@/engine/models";
 import { getUpdatedPointsControl } from "@/engine/utilities";
 
 export const evaluateWinningCard = ({

@@ -1,0 +1,15 @@
+@import "@/common/styles/utilities";
+
+.ValueIndicator {
+  position: absolute;
+  font-size: rem(26px);
+  top: 0;
+  left: 7px;
+
+  &--bottom {
+    top: unset;
+    left: unset;
+    bottom: 0;
+    right: 7px;
+  }
+}
